@@ -60,6 +60,12 @@
         font-weight: 600;
         line-height: 20px;
         cursor: pointer;
+        &:hover {
+          background-color: #c6ac98;
+        }
+        &:active {
+          background-color: #a18570;
+        }
       }
     }
   }
@@ -68,8 +74,9 @@
       display: flex;
       justify-content: center;
       background: #78563d;
-      height: 400px;
+      height: 25vh;
       .firstWrapperElement {
+        margin: auto 0;
         .imageAddress {
           .addressLogo {
             width: 180px;
@@ -200,6 +207,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        height: 37vh;
         .responsive1024WrapperElement {
           display: none;
         }
