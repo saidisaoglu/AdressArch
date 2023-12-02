@@ -1,47 +1,40 @@
 import styles from "./Menu.module.scss";
-import addressLogo from "../../assets/Logo.svg";
-import shoppingCardIcon from "../../assets/Shopping_card_icon.svg";
+import AllInformationJS from "../../informations";
 import DropDownLanguage from "./DropDownLanguage";
 
-export default function Menu({
-  homePage,
-  projects,
-  whereToFind,
-  vlog,
-  customerReviews,
-  contactWithUs,
-  addressWood,
-  toggleDropdown,
-  toggleDropDownNavbar,
-}) {
+export default function Menu({ toggleDropdown, toggleDropDownNavbar }) {
   const refreshPage = () => {
-    window.location.reload(); // Reloads the entire page
+    window.location.reload();
   };
   return (
     <div className={styles.menuContainer}>
       <div className={styles.addressElement}>
-        <img onClick={refreshPage} src={addressLogo} alt="Address Logo" />
+        <img
+          onClick={refreshPage}
+          src={AllInformationJS.Icons.addressLogo}
+          alt="Address Logo"
+        />
       </div>
       <div className={styles.textsElement}>
         <div>
           <a href="" onClick={refreshPage}>
-            {homePage}
+            {AllInformationJS.texts.homePage}
           </a>
         </div>
         <div>
-          <a href="">{projects}</a>
+          <a href="">{AllInformationJS.texts.projects}</a>
         </div>
         <div>
-          <a href="#">{whereToFind}</a>
+          <a href="#">{AllInformationJS.texts.whereToFind}</a>
         </div>
         <div>
-          <a href="#">{vlog}</a>
+          <a href="#">{AllInformationJS.texts.vlog}</a>
         </div>
         <div>
-          <a href="#">{customerReviews}</a>
+          <a href="#">{AllInformationJS.texts.customerReviews}</a>
         </div>
         <div>
-          <a href="#">{contactWithUs}</a>
+          <a href="#">{AllInformationJS.texts.contactWithUs}</a>
         </div>
       </div>
       <div className={styles.languageAndButtonElements}>
@@ -50,8 +43,11 @@ export default function Menu({
         </div>
         <button className={styles.iconAndTextButton}>
           <div className={styles.buttonElements}>
-            <img src={shoppingCardIcon} alt="Shopping Card Icon" />
-            <p>{addressWood}</p>
+            <img
+              src={AllInformationJS.Icons.shoppingCardIcon}
+              alt="Shopping Card Icon"
+            />
+            <p>{AllInformationJS.texts.addressWood}</p>
           </div>
         </button>
       </div>
@@ -61,16 +57,19 @@ export default function Menu({
         </div>
         <button className={styles.iconAndTextButton768}>
           <div className={styles.buttonElements}>
-            <img src={shoppingCardIcon} alt="Shopping Card Icon" />
-            <p>{addressWood}</p>
+            <img
+              src={AllInformationJS.Icons.shoppingCardIcon}
+              alt="Shopping Card Icon"
+            />
+            <p>{AllInformationJS.texts.addressWood}</p>
           </div>
         </button>
         <div className={styles.menuBarElement}>
           <p className={styles.firstMenuText} onClick={toggleDropdown}>
-            Menu
+            {AllInformationJS.texts.menuWord}
           </p>
           <p className={styles.secondMenuText} onClick={toggleDropDownNavbar}>
-            Menu
+            {AllInformationJS.texts.menuWord}
           </p>
         </div>
       </div>

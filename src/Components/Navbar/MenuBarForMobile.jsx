@@ -1,33 +1,30 @@
 import styles from "./MenuBarForMobile.module.scss";
-import Xicon from "../../assets/Xicon.svg";
-import ShoppingIcon from "../../assets/Shopping_card_icon.svg";
+import AllInformationJS from "../../informations";
 
-export default function MenuForMobile({
-  homePage,
-  projects,
-  whereToFind,
-  vlog,
-  customerReviews,
-  contactWithUs,
-  addressWood,
-  closeDropdown,
-}) {
+export default function MenuForMobile({ closeDropdown }) {
   return (
     <div className={styles.dropdownElement}>
       <div className={styles.XiconElement}>
-        <img onClick={closeDropdown} src={Xicon} alt="X Icon" />
+        <img
+          onClick={closeDropdown}
+          src={AllInformationJS.Icons.XIcon}
+          alt="X Icon"
+        />
       </div>
       <div className={styles.textsInMenu}>
-        <a>{homePage}</a>
-        <a>{projects}</a>
-        <a>{whereToFind}</a>
-        <a>{vlog}</a>
-        <a>{customerReviews}</a>
-        <a>{contactWithUs}</a>
+        <a>{AllInformationJS.texts.homePage}</a>
+        <a>{AllInformationJS.texts.projects}</a>
+        <a>{AllInformationJS.texts.whereToFind}</a>
+        <a>{AllInformationJS.texts.vlog}</a>
+        <a>{AllInformationJS.texts.customerReviews}</a>
+        <a>{AllInformationJS.texts.contactWithUs}</a>
         <button className={styles.buttonContainer}>
           <div className={styles.buttonElements}>
-            <img src={ShoppingIcon} alt="Shopping Icon" />
-            <p>{addressWood}</p>
+            <img
+              src={AllInformationJS.Icons.shoppingCardIcon}
+              alt="Shopping Icon"
+            />
+            <p>{AllInformationJS.texts.addressWood}</p>
           </div>
         </button>
       </div>

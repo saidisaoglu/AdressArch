@@ -1,58 +1,44 @@
 import styles from "./ContactUs.module.scss";
-import whiteMapIcon from "../../assets/whiteMapIcon.svg";
-import whitecallIcon from "../../assets/whitecallIcon.svg";
-import whiteWpIcon from "../../assets/whiteWpIcon.svg";
-import whiteInstaIcon from "../../assets/whiteInstaIcon.svg";
-import whiteFbIcon from "../../assets/whiteFbIcon.svg";
-import whiteYoutubeIcon from "../../assets/whiteYoutubeIcon.svg";
-import bottomAddressLogo from "../../assets/bottomAddressLogo.svg";
+import AllInformationJS from "../../informations";
 
-export default function ContactUs({
-  contactUs,
-  fullName,
-  email,
-  header,
-  message,
-  sendButton,
-  locationText,
-  phoneNumber,
-  homePage,
-  blog,
-  vlog,
-  projects,
-  Interior,
-  Exterior,
-  whereToFind,
-  ourProjects,
-  competitions,
-  styless,
-  educationalinformation,
-  customerReviews,
-  aboutUs,
-  contactWithUs,
-  designerText,
-  designer,
-}) {
+export default function ContactUs() {
   return (
     <section className={styles.footerContainer}>
-      <p className={styles.contactUsText}>{contactUs}</p>
+      <p className={styles.contactUsText}>{AllInformationJS.texts.contactUs}</p>
       <div className={styles.inputsContainer}>
         <div className={styles.fullnameAndEmailElements}>
-          <input type="text" name="name" id="name" placeholder={fullName} />
-          <input type="email" name="email" id="email" placeholder={email} />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder={AllInformationJS.texts.fullName}
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder={AllInformationJS.texts.email}
+          />
         </div>
         <div className={styles.headerAndMessageElements}>
-          <input type="text" name="header" id="header" placeholder={header} />
+          <input
+            type="text"
+            name="header"
+            id="header"
+            placeholder={AllInformationJS.texts.header}
+          />
           <input
             className={styles.messageInput}
             type="text"
             name="message"
             id="message"
-            placeholder={message}
+            placeholder={AllInformationJS.texts.message}
           />
         </div>
         <div className={styles.sendButtonElement}>
-          <button className={styles.sendButton}>{sendButton}</button>
+          <button className={styles.sendButton}>
+            {AllInformationJS.texts.sendButton}
+          </button>
         </div>
       </div>
       <div className={styles.footerWrapper}>
@@ -61,82 +47,100 @@ export default function ContactUs({
             <div className={styles.imageAddress}>
               <img
                 className={styles.addressLogo}
-                src={bottomAddressLogo}
+                src={AllInformationJS.ContactInformations.bottomAddressLogo}
                 alt="Address Logo"
               />
             </div>
             <div className={styles.mapAndLocationText}>
-              <img src={whiteMapIcon} alt="Map Icon" />
-              <p>{locationText}</p>
+              <img
+                src={AllInformationJS.ContactInformations.whiteMapIcon}
+                alt="Map Icon"
+              />
+              <p>{AllInformationJS.texts.locationText}</p>
             </div>
             <div className={styles.iconsContainer}>
               <div className={styles.callAndPhoneNumber}>
-                <img src={whitecallIcon} alt="Call Icon" />
-                <p>{phoneNumber}</p>
+                <img
+                  src={AllInformationJS.ContactInformations.whitecallIcon}
+                  alt="Call Icon"
+                />
+                <p>{AllInformationJS.texts.phoneNumber}</p>
               </div>
               <div className={styles.socialNetworkElements}>
-                <img src={whiteFbIcon} alt="Facebook Icon" />
-                <img src={whiteWpIcon} alt="Whatsapp Icon" />
-                <img src={whiteInstaIcon} alt="Instagram Icon" />
-                <img src={whiteYoutubeIcon} alt="Youtube Icon" />
+                <img
+                  src={AllInformationJS.ContactInformations.whiteFbIcon}
+                  alt="Facebook Icon"
+                />
+                <img
+                  src={AllInformationJS.ContactInformationswhiteWpIcon}
+                  alt="Whatsapp Icon"
+                />
+                <img
+                  src={AllInformationJS.ContactInformationswhiteInstaIcon}
+                  alt="Instagram Icon"
+                />
+                <img
+                  src={AllInformationJS.ContactInformationswhiteYoutubeIcon}
+                  alt="Youtube Icon"
+                />
               </div>
             </div>
           </div>
           {/* ------------------responsive1440------------ */}
           <div className={styles.responsive1440WrapperElement}>
             <div className={styles.secondWrapperElement}>
-              <p>{homePage}</p>
-              <p>{blog}</p>
-              <p>{vlog}</p>
-              <p>{projects}</p>
-              <p>{Interior}</p>
+              <p>{AllInformationJS.texts.homePage}</p>
+              <p>{AllInformationJS.texts.blog}</p>
+              <p>{AllInformationJS.texts.vlog}</p>
+              <p>{AllInformationJS.texts.projects}</p>
+              <p>{AllInformationJS.texts.Interior}</p>
             </div>
             <div className={styles.thirdWrapperElement}>
-              <p>{Exterior}</p>
-              <p>{whereToFind}</p>
-              <p>{ourProjects}</p>
-              <p>{competitions}</p>
+              <p>{AllInformationJS.texts.Exterior}</p>
+              <p>{AllInformationJS.texts.whereToFind}</p>
+              <p>{AllInformationJS.texts.ourProjects}</p>
+              <p>{AllInformationJS.texts.competitions}</p>
             </div>
             <div className={styles.fourthWrapperElement}>
-              <p>{styless}</p>
-              <p>{educationalinformation}</p>
-              <p>{customerReviews}</p>
-              <p>{aboutUs}</p>
-              <p>{contactWithUs}</p>
+              <p>{AllInformationJS.texts.styless}</p>
+              <p>{AllInformationJS.texts.educationalinformation}</p>
+              <p>{AllInformationJS.texts.customerReviews}</p>
+              <p>{AllInformationJS.texts.aboutUs}</p>
+              <p>{AllInformationJS.texts.contactWithUs}</p>
             </div>
           </div>
           {/* ------------------responsive768------------ */}
           <div className={styles.responsive768WrapperElement}>
             <div className={styles.secondWrapperElement}>
-              <p>{homePage}</p>
-              <p>{vlog}</p>
-              <p>{projects}</p>
-              <p>{Exterior}</p>
+              <p>{AllInformationJS.texts.homePage}</p>
+              <p>{AllInformationJS.texts.vlog}</p>
+              <p>{AllInformationJS.texts.projects}</p>
+              <p>{AllInformationJS.texts.Exterior}</p>
             </div>
             <div className={styles.thirdWrapperElement}>
-              <p>{customerReviews}</p>
-              <p>{aboutUs}</p>
-              <p>{ourProjects}</p>
-              <p>{contactWithUs}</p>
-              <p>{whereToFind}</p>
+              <p>{AllInformationJS.texts.customerReviews}</p>
+              <p>{AllInformationJS.texts.aboutUs}</p>
+              <p>{AllInformationJS.texts.ourProjects}</p>
+              <p>{AllInformationJS.texts.contactWithUs}</p>
+              <p>{AllInformationJS.texts.whereToFind}</p>
             </div>
           </div>
           {/* ------------------responsive1024------------ */}
           <div className={styles.responsive1024WrapperElement}>
             <div className={styles.secondWrapperElement}>
-              <p>{homePage}</p>
-              <p>{vlog}</p>
-              <p>{projects}</p>
+              <p>{AllInformationJS.texts.homePage}</p>
+              <p>{AllInformationJS.texts.vlog}</p>
+              <p>{AllInformationJS.texts.projects}</p>
             </div>
             <div className={styles.thirdWrapperElement}>
-              <p>{Exterior}</p>
-              <p>{whereToFind}</p>
-              <p>{ourProjects}</p>
+              <p>{AllInformationJS.texts.Exterior}</p>
+              <p>{AllInformationJS.texts.whereToFind}</p>
+              <p>{AllInformationJS.texts.ourProjects}</p>
             </div>
             <div className={styles.fourthWrapperElement}>
-              <p>{customerReviews}</p>
-              <p>{aboutUs}</p>
-              <p>{contactWithUs}</p>
+              <p>{AllInformationJS.texts.customerReviews}</p>
+              <p>{AllInformationJS.texts.aboutUs}</p>
+              <p>{AllInformationJS.texts.contactWithUs}</p>
             </div>
           </div>
         </div>
@@ -144,10 +148,10 @@ export default function ContactUs({
         <div className={styles.aboutDesigner}>
           <div className={styles.aboutDesignerWrapper}>
             <div className={styles.designerTestElement}>
-              <p>{designerText}</p>
+              <p>{AllInformationJS.texts.designerText}</p>
             </div>
             <div className={styles.designerCompanyElement}>
-              <a href="#">{designer}</a>
+              <a href="#">{AllInformationJS.texts.designer}</a>
             </div>
           </div>
         </div>

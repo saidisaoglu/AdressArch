@@ -1,5 +1,5 @@
-import downSolid from "../../assets/basil_caret-down-solid.svg";
 import styles from "./DropDownLanguage.module.scss";
+import AllInformationJS from "../../informations";
 import { useState } from "react";
 
 export default function DropDownLanguage() {
@@ -13,7 +13,7 @@ export default function DropDownLanguage() {
   function selectLanguage(language) {
     setSelectedLanguage(language);
     setTimeout(() => {
-      setDropdownVisible(false); // Close the dropdown after 0.4 seconds
+      setDropdownVisible(false);
     }, 400);
   }
 
@@ -22,7 +22,7 @@ export default function DropDownLanguage() {
       <div className={styles.dropdownLanguageSelected}>
         <p className={styles.languageonPage}>{selectedLanguage}</p>
         <button onClick={toggleButton} className={styles.downSolidButton}>
-          <img src={downSolid} alt="Down Solid" />
+          <img src={AllInformationJS.Icons.downSolidArrow} alt="Down Solid" />
         </button>
       </div>
       <div

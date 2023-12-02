@@ -1,10 +1,7 @@
 import React, { useRef, useState } from "react";
 import VlogScss from "./Vlog.module.scss";
-import VectorImg from "../Images/VlogCompImg/VectorImg.png";
-import Video1 from "../Images/VlogCompImg/Video1.mp4";
-import playButtonimg from "../Images/VlogCompImg/playButton.png";
-import thumbNail from "../Images/VlogCompImg/thumbNail.png";
 import VlogSectionCarousel from "./VlogSectionCarousel";
+import AllInformationJS from "../../informations";
 
 export default function Vlog() {
   const videoRef = useRef(null);
@@ -26,23 +23,23 @@ export default function Vlog() {
   return (
     <section className={VlogScss.VlogSection}>
       <div className={VlogScss.VlogSectionHeader}>
-        <h2>Vloglar</h2>
-        <img src={VectorImg} alt="" />
+        <h2>{AllInformationJS.texts.vlogs}</h2>
+        <img src={AllInformationJS.VlogsImages.vectorImg} alt="Vector Image" />
       </div>
       {/* <VlogSectionCarousel /> */}
       <div className={VlogScss.videoContainer}>
         <img
           onClick={handlePlay}
           className={VlogScss.playButton}
-          src={playButtonimg}
-          alt=""
+          src={AllInformationJS.VlogsImages.playButtonimg}
+          alt="Play Button"
           style={buttonStyle}
         />
         <video
           controls={isPlaying}
-          poster={thumbNail}
+          poster={AllInformationJS.VlogsImages.thumbNail}
           ref={videoRef}
-          src={Video1}
+          src={AllInformationJS.VlogsImages.video1}
         ></video>
         <VlogSectionCarousel />
       </div>

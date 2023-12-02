@@ -1,19 +1,22 @@
-import React from "react"; // Make sure to import React
+import React from "react";
+import AllInformationJS from "../../informations";
 import styles from "./AboutUs.module.scss";
-import aboutUsImage from "../Images/aboutUs.png";
 
-export default function AboutUs({ aboutUs, userName, aboutUsText }) {
+export default function AboutUs() {
   return (
     <section className={styles.aboutUsContainer}>
       <div className={styles.aboutUsWrapper}>
         <div className={styles.headerContainer}>
-          <p>{aboutUs}</p>
+          <p>{AllInformationJS.texts.aboutUs}</p>
         </div>
         <div className={styles.imageAndTextContainer}>
-          <img src={aboutUsImage} alt="About Us" />
+          <img
+            src={AllInformationJS.AboutUsInformations.aboutUsImage}
+            alt="About Us"
+          />
           <div className={styles.textContainer}>
-            <p>{userName}</p>
-            <p>{aboutUsText}</p>
+            <p>{AllInformationJS.texts.userName}</p>
+            <p>{AllInformationJS.texts.aboutUsText}</p>
           </div>
         </div>
       </div>

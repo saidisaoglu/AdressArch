@@ -1,8 +1,8 @@
-import image from "../Images/CustomCommentsImg/PersonImg.png";
-import CustomerCommentsCarouselScss from "./CustomerCommentsCarousel.module.scss";
 import React from "react";
+import CustomerCommentsCarouselScss from "./CustomerCommentsCarousel.module.scss";
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import AllInformationJS from "../../informations";
 
 function CustomerCommentsCarousel() {
   const [index, setIndex] = useState(0);
@@ -38,26 +38,28 @@ function CustomerCommentsCarousel() {
       >
         <Carousel.Item className={CustomerCommentsCarouselScss.item1}>
           <div className={CustomerCommentsCarouselScss.CustomerCommentsCard}>
-            <img src={image} alt="" />
+            <img
+              src={
+                AllInformationJS.whereToFindInformations.FirstPerson
+                  .PersonImages
+              }
+              alt="First Person"
+            />
             <div>
               <div
                 className={CustomerCommentsCarouselScss.CustomerCommentsDesc}
               >
-                <h2>Name Surname</h2>
+                <h2>
+                  {
+                    AllInformationJS.whereToFindInformations.FirstPerson
+                      .FullName
+                  }
+                </h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur. Neque laoreet morbi
-                  lacus amet sodales tempus tellus neque purus. Nisl dignissim
-                  id et nunc ut. Fames eu proin purus risus dapibus id eu.
-                  Dignissim metus maecenas vulputate nunc sagittis facilisis
-                  turpis. Amet sollicitudin odio aliquet congue id non arcu.
-                  Facilisis ipsum dignissim netus mi massa vel diam proin proin.
-                  Elementum elementum senectus mi nulla. Hac dui pulvinar
-                  vulputate in nibh pharetra. Sollicitudin vestibulum sapien
-                  magna nunc condimentum. Consectetur quis dignissim amet et
-                  rhoncus. Laoreet magna nisi ornare hendrerit. Facilisis dictum
-                  arcu tempor viverra ornare massa interdum mattis. Sem
-                  tristique condimentum fringilla facilisis gravida pellentesque
-                  in.
+                  {
+                    AllInformationJS.whereToFindInformations.FirstPerson
+                      .PersonInformations
+                  }
                 </p>
               </div>
             </div>
@@ -65,28 +67,28 @@ function CustomerCommentsCarousel() {
         </Carousel.Item>
         <Carousel.Item className={CustomerCommentsCarouselScss.item1}>
           <div className={CustomerCommentsCarouselScss.CustomerCommentsCard}>
-            <div>
-              <img src={image} alt="" />
-            </div>
+            <img
+              src={
+                AllInformationJS.whereToFindInformations.SecondPerson
+                  .PersonImages
+              }
+              alt="First Person"
+            />
             <div>
               <div
                 className={CustomerCommentsCarouselScss.CustomerCommentsDesc}
               >
-                <h2>Name Surname</h2>
+                <h2>
+                  {
+                    AllInformationJS.whereToFindInformations.SecondPerson
+                      .FullName
+                  }
+                </h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur. Neque laoreet morbi
-                  lacus amet sodales tempus tellus neque purus. Nisl dignissim
-                  id et nunc ut. Fames eu proin purus risus dapibus id eu.
-                  Dignissim metus maecenas vulputate nunc sagittis facilisis
-                  turpis. Amet sollicitudin odio aliquet congue id non arcu.
-                  Facilisis ipsum dignissim netus mi massa vel diam proin proin.
-                  Elementum elementum senectus mi nulla. Hac dui pulvinar
-                  vulputate in nibh pharetra. Sollicitudin vestibulum sapien
-                  magna nunc condimentum. Consectetur quis dignissim amet et
-                  rhoncus. Laoreet magna nisi ornare hendrerit. Facilisis dictum
-                  arcu tempor viverra ornare massa interdum mattis. Sem
-                  tristique condimentum fringilla facilisis gravida pellentesque
-                  in.
+                  {
+                    AllInformationJS.whereToFindInformations.SecondPerson
+                      .PersonInformations
+                  }
                 </p>
               </div>
             </div>
@@ -94,28 +96,28 @@ function CustomerCommentsCarousel() {
         </Carousel.Item>
         <Carousel.Item className={CustomerCommentsCarouselScss.item1}>
           <div className={CustomerCommentsCarouselScss.CustomerCommentsCard}>
-            <div>
-              <img src={image} alt="" />
-            </div>
+            <img
+              src={
+                AllInformationJS.whereToFindInformations.ThirdPerson
+                  .PersonImages
+              }
+              alt="First Person"
+            />
             <div>
               <div
                 className={CustomerCommentsCarouselScss.CustomerCommentsDesc}
               >
-                <h2>Name Surname</h2>
+                <h2>
+                  {
+                    AllInformationJS.whereToFindInformations.ThirdPerson
+                      .FullName
+                  }
+                </h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur. Neque laoreet morbi
-                  lacus amet sodales tempus tellus neque purus. Nisl dignissim
-                  id et nunc ut. Fames eu proin purus risus dapibus id eu.
-                  Dignissim metus maecenas vulputate nunc sagittis facilisis
-                  turpis. Amet sollicitudin odio aliquet congue id non arcu.
-                  Facilisis ipsum dignissim netus mi massa vel diam proin proin.
-                  Elementum elementum senectus mi nulla. Hac dui pulvinar
-                  vulputate in nibh pharetra. Sollicitudin vestibulum sapien
-                  magna nunc condimentum. Consectetur quis dignissim amet et
-                  rhoncus. Laoreet magna nisi ornare hendrerit. Facilisis dictum
-                  arcu tempor viverra ornare massa interdum mattis. Sem
-                  tristique condimentum fringilla facilisis gravida pellentesque
-                  in.
+                  {
+                    AllInformationJS.whereToFindInformations.ThirdPerson
+                      .PersonInformations
+                  }
                 </p>
               </div>
             </div>

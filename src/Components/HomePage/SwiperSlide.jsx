@@ -1,7 +1,5 @@
 import styles from "./SwiperSlide.module.scss";
-import imageOne from "../Images/image_1.png";
-import imageTwo from "../Images/image_2.png";
-import imageThree from "../Images/image_3.png";
+import AllInformationJS from "../../informations";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -9,6 +7,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export default function CoverflowSwiper() {
+  const Images = [
+    AllInformationJS.CarouselInNavbar.imageOne,
+    AllInformationJS.CarouselInNavbar.imageTwo,
+    AllInformationJS.CarouselInNavbar.imageThree,
+  ];
   return (
     <div className={styles.swiperContainer}>
       {["mobileAndTabletVersion", "laptopVersion"].map((version, index) => (
@@ -30,9 +33,9 @@ export default function CoverflowSwiper() {
           modules={[Autoplay, Pagination, Navigation]}
           className={`${styles.mySwiper} ${styles[version]}`}
         >
-          {[imageOne, imageTwo, imageThree, imageTwo].map((image, i) => (
-            <SwiperSlide key={i}>
-              <img src={image} alt="" />
+          {Images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <img src={image} alt="Images" />
             </SwiperSlide>
           ))}
         </Swiper>

@@ -1,7 +1,6 @@
-import Subtract from "../Images/WhereToFindImg/Subtract.png";
-import WhereToFindScss from "./WhereToFind.module.scss";
-import image6 from "../Images/WhereToFindImg/image6.png";
 import { useState } from "react";
+import WhereToFindScss from "./WhereToFind.module.scss";
+import AllInformationJS from "../../informations";
 
 export default function WhereToFind() {
   const [activeItem, setActiveItem] = useState("listItem1");
@@ -22,8 +21,11 @@ export default function WhereToFind() {
   return (
     <section className={WhereToFindScss.WhereToFindSection}>
       <div className={WhereToFindScss.WhereToFindHeader}>
-        <img src={Subtract} alt="Subtract" />
-        <h2>Hardan Tapaq?</h2>
+        <img
+          src={AllInformationJS.whereToFindInformations.Images.subtractImage}
+          alt="Subtract Image"
+        />
+        <h2>{AllInformationJS.texts.whereToFind}</h2>
       </div>
       <div className={WhereToFindScss.WhereToFindBody}>
         <div className={WhereToFindScss.leftPart}>
@@ -39,10 +41,14 @@ export default function WhereToFind() {
                   }`}
                   onClick={() => toggleActive(item)}
                 >
-                  <img src={image6} alt="" />
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  </p>
+                  <img
+                    src={
+                      AllInformationJS.whereToFindInformations.Images
+                        .imagesInScroll
+                    }
+                    alt="Images In Scroll"
+                  />
+                  <p>{AllInformationJS.whereToFindInformations.Texts.texts1}</p>
                 </li>
               ))}
             </ul>
@@ -53,7 +59,10 @@ export default function WhereToFind() {
             <iframe
               width="90%"
               height="620px"
-              src="https://www.youtube.com/embed/WX_k6TpUadQ?si=Ao7ZIyXQU_ifpKWA"
+              src={
+                AllInformationJS.whereToFindInformations.YoutubeVideos
+                  .firstVideo
+              }
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             ></iframe>
