@@ -2,7 +2,7 @@ import styles from "./Menu.module.scss";
 import AllInformationJS from "../../informations";
 import DropDownLanguage from "./DropDownLanguage";
 
-export default function Menu({ toggleDropdown, toggleDropDownNavbar }) {
+export default function Menu({ toggleDropDownNavbar, handleClick }) {
   const refreshPage = () => {
     window.location.reload();
   };
@@ -17,29 +17,42 @@ export default function Menu({ toggleDropdown, toggleDropDownNavbar }) {
       </div>
       <div className={styles.textsElement}>
         <div>
-          <a href="" onClick={refreshPage}>
-            {AllInformationJS.texts.homePage}
+          <a onClick={refreshPage}>{AllInformationJS.texts.homePage}</a>
+        </div>
+        <div>
+          <a onClick={() => handleClick("projectsRef")}>
+            {AllInformationJS.texts.projects}
           </a>
         </div>
         <div>
-          <a href="">{AllInformationJS.texts.projects}</a>
+          <a onClick={() => handleClick("vlogRef")}>
+            {AllInformationJS.texts.vlog}
+          </a>
         </div>
         <div>
-          <a href="#">{AllInformationJS.texts.whereToFind}</a>
+          <a onClick={() => handleClick("whereToFindRef")}>
+            {AllInformationJS.texts.whereToFind}
+          </a>
+        </div>
+        {/* <div>
+          <a onClick={() => handleClick("customerReviewsRef")}>
+            {AllInformationJS.texts.customerReviews}
+          </a>
+        </div> */}
+        <div>
+          <a onClick={() => handleClick("aboutUsRef")}>
+            {AllInformationJS.texts.aboutUs}
+          </a>
         </div>
         <div>
-          <a href="#">{AllInformationJS.texts.vlog}</a>
-        </div>
-        <div>
-          <a href="#">{AllInformationJS.texts.customerReviews}</a>
-        </div>
-        <div>
-          <a href="#">{AllInformationJS.texts.contactWithUs}</a>
+          <a onClick={() => handleClick("contactWithUsRef")}>
+            {AllInformationJS.texts.contactWithUs}
+          </a>
         </div>
       </div>
       <div className={styles.languageAndButtonElements}>
         <div className={styles.dropdownElement1440}>
-          <DropDownLanguage />
+          {/* <DropDownLanguage /> */}
         </div>
         <button className={styles.iconAndTextButton}>
           <div className={styles.buttonElements}>
@@ -53,7 +66,7 @@ export default function Menu({ toggleDropdown, toggleDropDownNavbar }) {
       </div>
       <div className={styles.dropdownAndMenuBar}>
         <div className={styles.dropdownElement}>
-          <DropDownLanguage />
+          {/* <DropDownLanguage /> */}
         </div>
         <button className={styles.iconAndTextButton768}>
           <div className={styles.buttonElements}>
@@ -65,9 +78,6 @@ export default function Menu({ toggleDropdown, toggleDropDownNavbar }) {
           </div>
         </button>
         <div className={styles.menuBarElement}>
-          <p className={styles.firstMenuText} onClick={toggleDropdown}>
-            {AllInformationJS.texts.menuWord}
-          </p>
           <p className={styles.secondMenuText} onClick={toggleDropDownNavbar}>
             {AllInformationJS.texts.menuWord}
           </p>

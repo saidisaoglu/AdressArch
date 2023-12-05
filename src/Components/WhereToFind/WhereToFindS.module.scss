@@ -1,0 +1,211 @@
+@import "../../Scss/Color/colors";
+@import "../../Scss/Responsive\ measure/measure";
+
+.WhereToFindSection {
+  width: 100%;
+  margin-top: 60%;
+  padding-top: 100px;
+  @include responsive580 {
+    margin-top: 65%;
+  }
+  @include responsive768 {
+    margin-top: 45%;
+    margin-bottom: 100px;
+  }
+  @include responsive900 {
+    margin-top: 48%;
+  }
+  @include responsive1024 {
+    margin-top: 50%;
+    margin-bottom: 10px;
+    padding-top: 150px;
+  }
+  @include responsive1280 {
+    margin-top: 55%;
+  }
+  @include minresponsive1440 {
+    margin-top: 53%;
+    padding-top: 200px;
+  }
+  .textContainer {
+    padding-top: 45px;
+    padding-bottom: 20px;
+    z-index: 10000;
+    position: relative;
+    p {
+      text-align: center;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      background: linear-gradient(90deg, #555 0%, #896a53 52.03%, #555 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include responsive768 {
+        font-size: 20px;
+        padding-bottom: 30px;
+      }
+      @include responsive1024 {
+        line-height: 30px;
+        font-size: 24px;
+        padding-bottom: 30px;
+      }
+    }
+  }
+  .sectionContainer {
+    width: 100%;
+    @include responsive768 {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+    .videosContainer {
+      @include responsive768 {
+        width: 50%;
+      }
+      .videosElement {
+        iframe {
+          width: 100%;
+          height: 60vw;
+          border-radius: 10px;
+          @include responsive768 {
+            height: 30vw;
+          }
+        }
+      }
+    }
+    .buttonAndSliderContainer {
+      .buttonContainer {
+        button {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          background-color: transparent;
+          border: none;
+          position: relative;
+          .backgroundColorInProject {
+            width: 300px;
+            height: 76px;
+            @include responsive1024 {
+              width: 380px;
+              height: 95px;
+            }
+            @include minresponsive1440 {
+              width: 480px;
+              height: 120px;
+            }
+          }
+          .videoAndTexts {
+            position: absolute;
+            top: 5px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            width: 95%;
+            height: 20px;
+            margin-top: 20px;
+            gap: 10px;
+            @include responsive1024 {
+              margin-top: 28.5px;
+            }
+            @include minresponsive1440 {
+              margin-top: 40px;
+            }
+            img {
+              width: 100px;
+              height: 55px;
+              border-radius: 5px;
+              @include responsive1024 {
+                width: 150px;
+                height: 70px;
+              }
+              @include minresponsive1440 {
+                width: 180px;
+                height: 80px;
+              }
+            }
+            p {
+              text-align: start;
+              color: black;
+              font-family: Montserrat;
+              font-size: 11.281px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 16.116px;
+              margin-top: 10px;
+              @include responsive1024 {
+                font-size: 16px;
+              }
+              @include minresponsive1440 {
+                font-size: 20px;
+                line-height: 22px;
+              }
+            }
+            .activeButton {
+              text-align: start;
+              color: #fff;
+              font-family: Montserrat;
+              font-size: 11.281px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 16.116px;
+              margin-top: 10px;
+              @include responsive1024 {
+                font-size: 16px;
+              }
+              @include minresponsive1440 {
+                font-size: 20px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+        .firstPartButtons {
+          display: flex;
+          gap: 24px;
+          overflow-x: scroll;
+          padding: 15px;
+          @include responsive768 {
+            display: block;
+            overflow-x: unset;
+            overflow-y: scroll;
+            height: 350px;
+            width: 330px;
+          }
+          @include responsive1024 {
+            width: 400px;
+            height: 480px;
+          }
+          @include minresponsive1440 {
+            width: 500px;
+            height: 550px;
+          }
+        }
+        .firstPartButtons::-webkit-scrollbar {
+          width: 8px;
+          height: 5px;
+          @include maxresponsive580 {
+            background: #eaeaea;
+            backdrop-filter: blur(27.907697677612305px);
+          }
+        }
+
+        .firstPartButtons::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px #eaeaea;
+          border-radius: 22px;
+        }
+
+        .firstPartButtons::-webkit-scrollbar-thumb {
+          background: $main-color;
+          border-radius: 22px;
+        }
+
+        .firstPartButtons::-webkit-scrollbar-thumb:hover {
+          background: #cf946a;
+        }
+      }
+    }
+  }
+}

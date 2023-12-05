@@ -1,9 +1,8 @@
 import React, { useRef, useState } from "react";
 import VlogScss from "./Vlog.module.scss";
-import VlogSectionCarousel from "./VlogSectionCarousel";
 import AllInformationJS from "../../informations";
 
-export default function Vlog() {
+export default function Vlog({ vlogRef }) {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -23,7 +22,7 @@ export default function Vlog() {
   return (
     <section className={VlogScss.VlogSection}>
       <div className={VlogScss.VlogSectionHeader}>
-        <h2>{AllInformationJS.texts.vlogs}</h2>
+        <h2 ref={vlogRef}>{AllInformationJS.texts.vlogs}</h2>
         <img src={AllInformationJS.VlogsImages.vectorImg} alt="Vector Image" />
       </div>
       {/* <VlogSectionCarousel /> */}
@@ -41,7 +40,12 @@ export default function Vlog() {
           ref={videoRef}
           src={AllInformationJS.VlogsImages.video1}
         ></video>
-        <VlogSectionCarousel />
+      </div>
+      <div className={VlogScss.imageInDown}>
+        <img
+          src={AllInformationJS.VlogsImages.subtractImage}
+          alt="Subtract Image"
+        />
       </div>
     </section>
   );

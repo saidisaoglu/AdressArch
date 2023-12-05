@@ -1,0 +1,65 @@
+.carousel .carouselItem img {
+  width: 100%;
+}
+.carousel .carousel-indicators button {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+.carousel a span:first-child {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none !important;
+}
+@media screen and (max-width: 768px) {
+  .carousel .carouselItem img {
+    max-height: 768px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .carousel a span:first-child {
+    border: 3px solid rgb(255, 255, 255);
+  }
+  .carousel-control-prev-icon {
+    display: block !important;
+    width: 48px !important;
+    height: 48px !important;
+    background-size: 20px !important;
+    background-position: 45% !important;
+  }
+  .carousel-control-next-icon {
+    display: block !important;
+    width: 48px !important;
+    height: 48px !important;
+    background-size: 20px !important;
+    background-position: 55% !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .carousel .carouselItem img {
+    max-height: 96.9vh;
+  }
+}
+@media screen and (max-width: 1152px) {
+  .carousel .carouselItem img {
+    max-height: 97.3vh;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .carousel .carouselItem img {
+    max-height: 97.3vh;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .carousel .carouselItem img {
+    max-height: 97.3vh;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .carousel .carouselItem img {
+    max-height: 97.6vh;
+  }
+}

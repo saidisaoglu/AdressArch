@@ -1,3 +1,5 @@
+@import "../../Scss/Responsive\ measure/measure";
+
 :root {
   --Montserrat-Font-Family: "Montserrat";
   --colorForText: #333333;
@@ -13,6 +15,9 @@
   align-items: center;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(38.5px);
+  @include responsive1920 {
+    max-width: 1920px;
+  }
   .addressElement {
     padding-left: 3px;
     img {
@@ -43,14 +48,7 @@
       display: none;
     }
     .menuBarElement {
-      padding: 15px 9px 0 12px;
-      .firstMenuText {
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        color: var(--colorForText);
-        font-family: var(--Montserrat-Font-Family);
-      }
+      padding: 15px 45px 0 12px;
       .secondMenuText {
         display: none;
       }
@@ -107,9 +105,6 @@
       }
       .menuBarElement {
         padding: 15px 10px 0 0;
-        .firstMenuText {
-          display: none;
-        }
         .secondMenuText {
           display: block;
           font-size: 12px;

@@ -5,6 +5,6 @@
   font-family: Montserrat !important;
 }
 body {
-  max-width: 1920px;
-  margin: auto;
+  max-width: 1920px !important;
+  margin: 0 auto !important;
 }

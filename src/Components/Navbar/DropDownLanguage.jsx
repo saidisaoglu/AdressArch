@@ -19,9 +19,9 @@ export default function DropDownLanguage() {
 
   return (
     <div className={styles.dropdownElement}>
-      <div className={styles.dropdownLanguageSelected}>
+      <div onClick={toggleButton} className={styles.dropdownLanguageSelected}>
         <p className={styles.languageonPage}>{selectedLanguage}</p>
-        <button onClick={toggleButton} className={styles.downSolidButton}>
+        <button className={styles.downSolidButton}>
           <img src={AllInformationJS.Icons.downSolidArrow} alt="Down Solid" />
         </button>
       </div>

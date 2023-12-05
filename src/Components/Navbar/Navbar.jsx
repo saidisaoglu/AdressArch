@@ -2,10 +2,10 @@ import { useState } from "react";
 import Icons from "./Icons";
 import Menu from "./Menu";
 import styles from "./Navbar.module.scss";
-import MenuForMobile from "./MenuBarForMobile";
 import ThirdNavbarMenu from "./ThirdNavbarMenu";
+import HamburgerBar from "./HamburgerBar";
 
-export default function Navbar() {
+export default function Navbar({ handleClick }) {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [dropDownNavbarVisible, setDropDownNavbarVisible] = useState(false);
 
@@ -17,6 +17,10 @@ export default function Navbar() {
     setDropdownVisible(false);
   }
 
+  function closeThirdNavbarDropdown() {
+    setDropDownNavbarVisible(false);
+  }
+
   function toggleDropDownNavbar() {
     setDropDownNavbarVisible(!dropDownNavbarVisible);
   }
@@ -25,20 +29,24 @@ export default function Navbar() {
     <header className={styles.headerContainer}>
       <Icons />
       <Menu
-        toggleDropdown={toggleDropdown}
         toggleDropDownNavbar={toggleDropDownNavbar}
+        handleClick={handleClick}
       />
-      <div
-        className={`${styles.dropdown}${dropdownVisible ? styles.active : ""}`}
-      >
-        <MenuForMobile closeDropdown={closeDropdown} />
-      </div>
+      <HamburgerBar
+        closeDropdown={closeDropdown}
+        toggleDropdown={toggleDropdown}
+        dropdownVisible={dropdownVisible}
+        handleClick={handleClick}
+      />
       <div
         className={`${styles.dropDownMenu}${
           dropDownNavbarVisible ? styles.activeMenu : ""
         }`}
       >
-        <ThirdNavbarMenu />
+        <ThirdNavbarMenu
+          handleClick={handleClick}
+          closeThirdNavbarDropdown={closeThirdNavbarDropdown}
+        />
       </div>
     </header>
   );

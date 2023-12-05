@@ -1,3 +1,5 @@
+@import "../../Scss/Responsive\ measure/measure";
+
 .footerContainer {
   width: 100%;
   .contactUsText {
@@ -12,6 +14,16 @@
     -webkit-text-fill-color: transparent;
     padding-top: 42px;
     padding-bottom: 32px;
+    @include responsive768 {
+      font-size: 20px;
+    }
+    @include responsive1024 {
+      padding: 60px 0;
+      font-size: 24px;
+    }
+    @include minresponsive1440 {
+      padding: 80px 0;
+    }
   }
   .inputsContainer {
     width: 90%;
@@ -22,13 +34,22 @@
       border-radius: 8px;
       border: 2px solid #dedede;
       background: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      @include responsive768 {
+        font-size: 16px;
+        font-weight: 600;
+      }
       &::placeholder {
         color: #bfbfbf;
         font-family: Montserrat;
-        font-size: 16px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 600;
         line-height: 20px;
+        @include responsive768 {
+          font-size: 16px;
+        }
       }
     }
     .fullnameAndEmailElements {
@@ -36,18 +57,78 @@
       flex-direction: column;
       gap: 20px;
       margin-bottom: 20px;
+      @include responsive1024 {
+        flex-direction: row;
+        justify-content: center;
+      }
+      input {
+        @include responsive1024 {
+          width: 100%;
+          height: 50px;
+        }
+        @include minresponsive1440 {
+          height: 54px;
+        }
+        @include responsive1600 {
+          height: 64px;
+        }
+        @include responsive1920 {
+          width: 580px;
+        }
+        ::placeholder {
+          @include responsive1024 {
+            font-size: 16px;
+          }
+        }
+      }
     }
     .headerAndMessageElements {
       display: flex;
       flex-direction: column;
       gap: 20px;
       margin-bottom: 20px;
+      @include responsive1920 {
+        width: 100%;
+      }
+      input {
+        @include responsive1024 {
+          height: 50px;
+        }
+        @include minresponsive1440 {
+          height: 54px;
+        }
+        @include responsive1600 {
+          height: 64px;
+        }
+        @include responsive1920 {
+          margin: auto;
+          width: 1180px;
+        }
+      }
       .messageInput {
         height: 200px;
         padding: 0 24px 150px 24px;
+        @include responsive1024 {
+          height: 100px;
+          padding: 0 24px 50px 24px;
+        }
+        @include minresponsive1440 {
+          padding: 25px 24px 64px 24px;
+        }
+        @include responsive1600 {
+          padding: 25px 24px 154px 24px;
+        }
       }
     }
     .sendButtonElement {
+      @include responsive768 {
+        display: flex;
+        justify-content: end;
+      }
+      @include responsive1920 {
+        width: 1180px;
+        margin: auto;
+      }
       .sendButton {
         width: 100%;
         padding: 16px;
@@ -59,6 +140,12 @@
         font-style: normal;
         font-weight: 600;
         line-height: 20px;
+        @include responsive768 {
+          width: 180px;
+        }
+        @include responsive1024 {
+          height: 52px;
+        }
         cursor: pointer;
         &:hover {
           background-color: #c6ac98;
@@ -75,12 +162,32 @@
       justify-content: center;
       background: #78563d;
       height: 25vh;
+      @include responsive768 {
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        height: 37vh;
+      }
+      @include responsive1024 {
+        height: 275px;
+      }
+      @include minresponsive1440 {
+        height: 275px;
+      }
+      @include responsive1600 {
+        height: 300px;
+      }
       .firstWrapperElement {
         margin: auto 0;
         .imageAddress {
+          margin-left: 25px;
           .addressLogo {
             width: 180px;
             height: 100px;
+            @include minresponsive1440 {
+              width: 204px;
+              height: 142px;
+            }
           }
         }
         .mapAndLocationText {
@@ -88,6 +195,8 @@
           justify-content: center;
           gap: 4px;
           margin-top: 10px;
+          text-decoration: none;
+          cursor: pointer;
           img {
             width: 8.506px;
             height: 10.333px;
@@ -108,6 +217,8 @@
             display: flex;
             justify-content: center;
             gap: 4px;
+            text-decoration: none;
+            cursor: pointer;
             img {
               width: 8.233px;
               height: 8.228px;
@@ -122,10 +233,14 @@
             }
           }
           .socialNetworkElements {
-            img {
-              width: 12px;
-              height: 12px;
-              margin-bottom: 13px;
+            a {
+              text-decoration: none;
+              cursor: pointer;
+              img {
+                width: 12px;
+                height: 12px;
+                margin-bottom: 13px;
+              }
               &:nth-child(2) {
                 margin-left: 4px;
                 margin-right: 4px;
@@ -139,12 +254,64 @@
       }
       .responsive1440WrapperElement {
         display: none;
+        @include minresponsive1440 {
+          display: flex;
+          justify-content: space-between;
+          width: 50%;
+        }
+        p {
+          @include minresponsive1440 {
+            color: #fff;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            padding-top: 4px;
+          }
+        }
       }
       .responsive768WrapperElement {
         display: none;
+        @include responsive768 {
+          width: 50%;
+          display: flex;
+          justify-content: space-between;
+        }
+        @include responsive1024 {
+          display: none;
+        }
+        p {
+          @include responsive768 {
+            color: #fff;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            cursor: pointer;
+            padding-top: 20px;
+          }
+        }
       }
       .responsive1024WrapperElement {
         display: none;
+        @include responsive1024 {
+          display: flex;
+          justify-content: space-between;
+          width: 50%;
+        }
+        @include minresponsive1440 {
+          display: none;
+        }
+        p {
+          @include responsive1024 {
+            color: #fff;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            padding-top: 24px;
+          }
+        }
       }
     }
     .aboutDesigner {
@@ -153,6 +320,12 @@
         display: flex;
         width: 100%;
         padding: 10px 24px;
+        @include responsive768 {
+          padding: 5px 24px;
+        }
+        @include minresponsive1440 {
+          padding: 5px 24px;
+        }
         .designerTestElement {
           width: 65%;
           padding-top: 10px;
@@ -175,289 +348,6 @@
             font-weight: 300;
             line-height: 20px;
             text-decoration: none;
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (min-width: 768px) {
-  .footerContainer {
-    .inputsContainer {
-      .sendButtonElement {
-        display: flex;
-        justify-content: end;
-        .sendButton {
-          width: 180px;
-          padding: 16px;
-          border-radius: 8px;
-          border: 1px solid #c09f78;
-          background: #c5a47e;
-          color: #fff;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 20px;
-        }
-      }
-    }
-    .footerWrapper {
-      .footerElements {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 37vh;
-        .responsive1024WrapperElement {
-          display: none;
-        }
-        .responsive768WrapperElement {
-          width: 50%;
-          display: flex;
-          justify-content: space-between;
-          p {
-            color: #fff;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 20px;
-            cursor: pointer;
-            padding-top: 20px;
-          }
-        }
-      }
-    }
-    .aboutDesigner {
-      .aboutDesignerWrapper {
-        padding: 5px 24px;
-      }
-    }
-  }
-}
-@media screen and (min-width: 1024px) {
-  .footerContainer {
-    .contactUsText {
-      padding-top: 30px;
-      padding-bottom: 20px;
-    }
-    .inputsContainer {
-      .fullnameAndEmailElements {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        input {
-          width: 100%;
-          height: 50px;
-          ::placeholder {
-            font-size: 16px;
-          }
-        }
-      }
-      .headerAndMessageElements {
-        input {
-          height: 50px;
-        }
-        .messageInput {
-          height: 100px;
-          padding: 0 24px 50px 24px;
-        }
-      }
-      .sendButtonElement {
-        display: flex;
-        justify-content: end;
-        .sendButton {
-          width: 180px;
-          height: 52px;
-        }
-      }
-    }
-    .footerWrapper {
-      .footerElements {
-        height: 275px;
-        .responsive768WrapperElement {
-          display: none;
-        }
-        .responsive1024WrapperElement {
-          display: flex;
-          justify-content: space-between;
-          width: 50%;
-          p {
-            color: #fff;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 20px;
-            padding-top: 24px;
-          }
-        }
-      }
-    }
-    .aboutDesigner {
-      .aboutDesignerWrapper {
-        padding: 5px 24px;
-      }
-    }
-  }
-}
-@media screen and (min-width: 1440px) {
-  .footerContainer {
-    .contactUsText {
-      padding-top: 64px;
-      padding-bottom: 80px;
-    }
-    .inputsContainer {
-      .fullnameAndEmailElements {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        input {
-          width: 100%;
-          height: 54px;
-          ::placeholder {
-            font-size: 16px;
-          }
-        }
-      }
-      .headerAndMessageElements {
-        input {
-          height: 54px;
-        }
-        .messageInput {
-          padding: 25px 24px 64px 24px;
-        }
-      }
-      .sendButtonElement {
-        display: flex;
-        justify-content: end;
-        .sendButton {
-          width: 180px;
-          height: 52px;
-        }
-      }
-    }
-    .footerWrapper {
-      .footerElements {
-        height: 275px;
-        .firstWrapperElement {
-          .imageAddress {
-            .addressLogo {
-              width: 204px;
-              height: 142px;
-            }
-          }
-        }
-        .responsive768WrapperElement {
-          display: none;
-        }
-        .responsive1024WrapperElement {
-          display: none;
-        }
-        .responsive1440WrapperElement {
-          display: flex;
-          justify-content: space-between;
-          width: 50%;
-          p {
-            color: #fff;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 20px;
-            padding-top: 4px;
-          }
-        }
-      }
-    }
-    .aboutDesigner {
-      .aboutDesignerWrapper {
-        padding: 5px 24px;
-      }
-    }
-  }
-}
-@media screen and (min-width: 1600px) {
-  .footerContainer {
-    .inputsContainer {
-      .fullnameAndEmailElements {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        input {
-          width: 100%;
-          height: 64px;
-          ::placeholder {
-            font-size: 16px;
-          }
-        }
-      }
-      .headerAndMessageElements {
-        input {
-          height: 64px;
-        }
-        .messageInput {
-          padding: 25px 24px 154px 24px;
-        }
-      }
-    }
-    .footerWrapper {
-      .footerElements {
-        height: 300px;
-        .firstWrapperElement {
-          .imageAddress {
-            .addressLogo {
-              width: 204px;
-              height: 142px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (min-width: 1920px) {
-  .footerContainer {
-    .inputsContainer {
-      .fullnameAndEmailElements {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        input {
-          width: 580px;
-          height: 64px;
-          ::placeholder {
-            font-size: 16px;
-          }
-        }
-      }
-      .headerAndMessageElements {
-        width: 100%;
-        input {
-          margin: auto;
-          width: 1180px;
-          height: 64px;
-        }
-        .messageInput {
-          padding: 25px 24px 154px 24px;
-        }
-      }
-      .sendButtonElement {
-        display: flex;
-        justify-content: end;
-        width: 1180px;
-        margin: auto;
-        .sendButton {
-          width: 180px;
-        }
-      }
-    }
-    .footerWrapper {
-      .footerElements {
-        height: 300px;
-        .firstWrapperElement {
-          .imageAddress {
-            .addressLogo {
-              width: 204px;
-              height: 142px;
-            }
           }
         }
       }

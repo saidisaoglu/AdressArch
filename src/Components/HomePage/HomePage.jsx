@@ -1,11 +1,11 @@
 import Navbar from "../Navbar/Navbar";
-import CoverflowSwiper from "./SwiperSlide";
+import CarouselInNavbar from "./Carousel";
 
-export default function HomePage() {
+export default function HomePage({ handleClick }) {
   return (
     <>
-      <Navbar />
-      <CoverflowSwiper />
+      <Navbar handleClick={handleClick} />
+      <CarouselInNavbar />
     </>
   );
 }

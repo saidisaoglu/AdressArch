@@ -1,46 +1,12 @@
 import styles from "./ContactUs.module.scss";
 import AllInformationJS from "../../informations";
+import { ContactUsEmail } from "./Email";
 
-export default function ContactUs() {
+export default function ContactUs({ contactWithUsRef }) {
   return (
-    <section className={styles.footerContainer}>
+    <section ref={contactWithUsRef} className={styles.footerContainer}>
       <p className={styles.contactUsText}>{AllInformationJS.texts.contactUs}</p>
-      <div className={styles.inputsContainer}>
-        <div className={styles.fullnameAndEmailElements}>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder={AllInformationJS.texts.fullName}
-          />
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder={AllInformationJS.texts.email}
-          />
-        </div>
-        <div className={styles.headerAndMessageElements}>
-          <input
-            type="text"
-            name="header"
-            id="header"
-            placeholder={AllInformationJS.texts.header}
-          />
-          <input
-            className={styles.messageInput}
-            type="text"
-            name="message"
-            id="message"
-            placeholder={AllInformationJS.texts.message}
-          />
-        </div>
-        <div className={styles.sendButtonElement}>
-          <button className={styles.sendButton}>
-            {AllInformationJS.texts.sendButton}
-          </button>
-        </div>
-      </div>
+      <ContactUsEmail />
       <div className={styles.footerWrapper}>
         <div className={styles.footerElements}>
           <div className={styles.firstWrapperElement}>
@@ -51,38 +17,53 @@ export default function ContactUs() {
                 alt="Address Logo"
               />
             </div>
-            <div className={styles.mapAndLocationText}>
+            <a
+              target="_blank"
+              href={AllInformationJS.texts.locationInMap}
+              className={styles.mapAndLocationText}
+            >
               <img
                 src={AllInformationJS.ContactInformations.whiteMapIcon}
                 alt="Map Icon"
               />
               <p>{AllInformationJS.texts.locationText}</p>
-            </div>
+            </a>
             <div className={styles.iconsContainer}>
-              <div className={styles.callAndPhoneNumber}>
+              <a
+                href={AllInformationJS.address.tel}
+                className={styles.callAndPhoneNumber}
+              >
                 <img
                   src={AllInformationJS.ContactInformations.whitecallIcon}
                   alt="Call Icon"
                 />
                 <p>{AllInformationJS.texts.phoneNumber}</p>
-              </div>
+              </a>
               <div className={styles.socialNetworkElements}>
-                <img
-                  src={AllInformationJS.ContactInformations.whiteFbIcon}
-                  alt="Facebook Icon"
-                />
-                <img
-                  src={AllInformationJS.ContactInformationswhiteWpIcon}
-                  alt="Whatsapp Icon"
-                />
-                <img
-                  src={AllInformationJS.ContactInformationswhiteInstaIcon}
-                  alt="Instagram Icon"
-                />
-                <img
-                  src={AllInformationJS.ContactInformationswhiteYoutubeIcon}
-                  alt="Youtube Icon"
-                />
+                <a href="">
+                  <img
+                    src={AllInformationJS.ContactInformations.whiteFbIcon}
+                    alt="Facebook Icon"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src={AllInformationJS.ContactInformations.whiteWpIcon}
+                    alt="Whatsapp Icon"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src={AllInformationJS.ContactInformations.whiteInstaIcon}
+                    alt="Instagram Icon"
+                  />
+                </a>
+                <a href="">
+                  <img
+                    src={AllInformationJS.ContactInformations.whiteYoutubeIcon}
+                    alt="Youtube Icon"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -151,7 +132,9 @@ export default function ContactUs() {
               <p>{AllInformationJS.texts.designerText}</p>
             </div>
             <div className={styles.designerCompanyElement}>
-              <a href="#">{AllInformationJS.texts.designer}</a>
+              <a target="_blank" href="https://webrandy.com/">
+                {AllInformationJS.texts.designer}
+              </a>
             </div>
           </div>
         </div>

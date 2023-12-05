@@ -14,28 +14,30 @@ export default function Icons() {
       <div className={styles.otherIconsElements}>
         <div className={styles.callIconElement}>
           <img src={AllInformationJS.Icons.callIcon} alt="Call Icon" />
-          <a href="#">{AllInformationJS.texts.phoneNumber}</a>
+          <a href={AllInformationJS.address.tel}>
+            {AllInformationJS.texts.phoneNumber}
+          </a>
         </div>
         <div className={styles.socialMediaElements}>
-          <a href="#">
+          <a target="_blank" href={AllInformationJS.address.wpAdd}>
             <img
               src={AllInformationJS.Icons.whatsappIcon}
               alt="Whatsapp Icon"
             />
           </a>
-          <a href="#">
+          <a target="_blank" href={AllInformationJS.address.instagramAdd}>
             <img
               src={AllInformationJS.Icons.instagramIcon}
               alt="Instagram Icon"
             />
           </a>
-          <a href="#">
+          <a target="_blank" href={AllInformationJS.address.faceebookAdd}>
             <img
               src={AllInformationJS.Icons.facebookIcon}
               alt="Facebook Icon"
             />
           </a>
-          <a href="#">
+          <a target="_blank" href={AllInformationJS.address.youtubeAdd}>
             <img src={AllInformationJS.Icons.youtubeIcon} alt="Youtube Icon" />
           </a>
         </div>
