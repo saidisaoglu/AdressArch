@@ -4,9 +4,9 @@ import styles from "./AboutUs.module.scss";
 
 export default function AboutUs({ aboutUsRef }) {
   return (
-    <section ref={aboutUsRef} className={styles.aboutUsContainer}>
+    <section className={styles.aboutUsContainer}>
       <div className={styles.aboutUsWrapper}>
-        <div className={styles.headerContainer}>
+        <div ref={aboutUsRef} className={styles.headerContainer}>
           <p>{AllInformationJS.texts.aboutUs}</p>
         </div>
         <div className={styles.imageAndTextContainer}>

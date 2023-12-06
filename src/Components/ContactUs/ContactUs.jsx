@@ -4,10 +4,10 @@ import { ContactUsEmail } from "./Email";
 
 export default function ContactUs({ contactWithUsRef }) {
   return (
-    <section ref={contactWithUsRef} className={styles.footerContainer}>
+    <section className={styles.footerContainer}>
       <p className={styles.contactUsText}>{AllInformationJS.texts.contactUs}</p>
       <ContactUsEmail />
-      <div className={styles.footerWrapper}>
+      <div ref={contactWithUsRef} className={styles.footerWrapper}>
         <div className={styles.footerElements}>
           <div className={styles.firstWrapperElement}>
             <div className={styles.imageAddress}>

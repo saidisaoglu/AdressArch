@@ -105,8 +105,8 @@ export default function WhereToFindS({ whereToFindRef }) {
   }
 
   return (
-    <section ref={whereToFindRef} className={styles.WhereToFindSection}>
-      <div className={styles.textContainer}>
+    <section className={styles.WhereToFindSection}>
+      <div ref={whereToFindRef} className={styles.textContainer}>
         <p>{AllInformationJS.texts.whereToFind}</p>
       </div>
       <div className={styles.sectionContainer}>

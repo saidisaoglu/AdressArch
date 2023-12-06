@@ -107,6 +107,8 @@ const AllInformationJS = {
     designerText:
       "© Saytın hazırlanması Webrandy şirkətinə məxsusdur, bütün hüquqlar qorunur.",
     designer: "Webrandy.com",
+    succesfullyMessage: "Mesajınız uğurla göndərildi!",
+    failedMessage: "Zəhmət olmasa bütün boş xanaları doldurun.",
   },
   CarouselInNavbar: {
     imageOne: ImageOne,

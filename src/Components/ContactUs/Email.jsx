@@ -23,7 +23,7 @@ export const ContactUsEmail = () => {
       formData.from_header === "" ||
       formData.message === ""
     ) {
-      toast.error("Please fill in all fields before submitting.");
+      toast.error(AllInformationJS.texts.failedMessage);
       return;
     }
 
@@ -37,7 +37,13 @@ export const ContactUsEmail = () => {
       .then(
         (result) => {
           console.log(result.text);
-          toast.success("Email sent successfully!");
+          toast.success(AllInformationJS.texts.succesfullyMessage);
+          setFormData({
+            from_name: "",
+            from_email: "",
+            from_header: "",
+            message: "",
+          });
         },
         (error) => {
           console.log(error.text);
@@ -96,9 +102,9 @@ export const ContactUsEmail = () => {
           type="submit"
           value={AllInformationJS.texts.sendButton}
           disabled={
-            formData.from_name === "" ||
-            formData.from_email === "" ||
-            formData.from_header === "" ||
+            formData.from_name === "" &&
+            formData.from_email === "" &&
+            formData.from_header === "" &&
             formData.message === ""
           }
         />

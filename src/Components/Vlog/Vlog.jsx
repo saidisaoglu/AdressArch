@@ -25,7 +25,6 @@ export default function Vlog({ vlogRef }) {
         <h2 ref={vlogRef}>{AllInformationJS.texts.vlogs}</h2>
         <img src={AllInformationJS.VlogsImages.vectorImg} alt="Vector Image" />
       </div>
-      {/* <VlogSectionCarousel /> */}
       <div className={VlogScss.videoContainer}>
         <img
           onClick={handlePlay}
