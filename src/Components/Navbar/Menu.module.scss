@@ -15,7 +15,15 @@
   align-items: center;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(38.5px);
+  @include responsive768 {
+    height: 67px;
+  }
+  @include minresponsive1440 {
+    height: 90px;
+    padding: 0 130px;
+  }
   @include responsive1920 {
+    padding: 0 370px;
     max-width: 1920px;
   }
   .addressElement {
@@ -24,108 +32,22 @@
       width: 53px;
       height: 36px;
       cursor: pointer;
-    }
-  }
-  .textsElement {
-    display: none;
-  }
-  .languageAndButtonElements {
-    .dropdownElement1440 {
-      display: none;
-    }
-    .iconAndTextButton {
-      display: none;
-    }
-  }
-  .dropdownAndMenuBar {
-    display: flex;
-    align-items: center;
-    .dropdownElement {
-      padding-right: 48px;
-      padding-top: 5px;
-    }
-    .iconAndTextButton768 {
-      display: none;
-    }
-    .menuBarElement {
-      padding: 15px 45px 0 12px;
-      .secondMenuText {
-        display: none;
-      }
-    }
-  }
-}
-@media screen and (min-width: 768px) {
-  .menuContainer {
-    height: 67px;
-    .addressElement {
-      img {
+      @include responsive768 {
         width: 80px;
         height: 56px;
       }
     }
-    .dropdownAndMenuBar {
-      display: flex;
-      align-items: center;
-      .dropdownElement {
-        display: block;
-        padding-right: 74px;
-        padding-top: 5px;
-      }
-      .iconAndTextButton768 {
-        height: 48px;
-        padding: 12px;
-        display: block;
-        background: #dead8a;
-        border-radius: 8px;
-        border: none;
-        margin-right: 24px;
-        &:active {
-          background-color: #a18570;
-        }
-        .buttonElements {
-          width: 180px;
-          display: flex;
-          justify-content: center;
-          height: 24px;
-          img {
-            width: 24px;
-            height: 24px;
-            margin-right: 12px;
-          }
-          p {
-            color: #fff;
-            font-family: Montserrat;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 600;
-            padding-top: 2px;
-          }
-        }
-      }
-      .menuBarElement {
-        padding: 15px 10px 0 0;
-        .secondMenuText {
-          display: block;
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 600;
-          color: var(--colorForText);
-          font-family: var(--Montserrat-Font-Family);
-        }
-      }
-    }
   }
-}
-@media screen and (min-width: 1440px) {
-  .menuContainer {
-    height: 90px;
-    padding: 0 130px;
-    .textsElement {
+  .textsElement {
+    display: none;
+    @include minresponsive1440 {
       display: flex;
       justify-content: center;
       align-items: center;
-      a {
+      margin-left: 100px; //language display block olanda bunu sil
+    }
+    a {
+      @include minresponsive1440 {
         display: inline-block;
         position: relative;
         text-decoration: none;
@@ -136,7 +58,9 @@
         cursor: pointer;
         padding: 15px 0;
       }
-      a:after {
+    }
+    a:after {
+      @include minresponsive1440 {
         content: "";
         position: absolute;
         width: 100%;
@@ -148,30 +72,46 @@
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
       }
-      a:hover:after {
+    }
+    a:hover:after {
+      @include minresponsive1440 {
         transform: scaleX(1);
         transform-origin: bottom left;
       }
-      div:nth-child(2) {
+    }
+    div:nth-child(2) {
+      @include minresponsive1440 {
         padding: 0 32px;
       }
-      div:nth-child(4) {
+    }
+    div:nth-child(4) {
+      @include minresponsive1440 {
         padding: 0 32px;
       }
-      div:last-child {
+    }
+    div:last-child {
+      @include minresponsive1440 {
         padding-left: 32px;
       }
     }
-    .languageAndButtonElements {
+  }
+  .languageAndButtonElements {
+    @include minresponsive1440 {
       display: flex;
       align-items: center;
-      .dropdownElement1440 {
+    }
+    .dropdownElement1440 {
+      display: none;
+      @include minresponsive1440 {
         display: block;
         display: block;
         padding-right: 80px;
         padding-top: 5px;
       }
-      .iconAndTextButton {
+    }
+    .iconAndTextButton {
+      display: none;
+      @include minresponsive1440 {
         height: 48px;
         padding: 12px;
         display: block;
@@ -180,23 +120,33 @@
         border: none;
         margin-right: 24px;
         transition: background-color 0.2s;
-        &:hover {
+      }
+      &:hover {
+        @include minresponsive1440 {
           background-color: #a18570;
         }
-        &:active {
+      }
+      &:active {
+        @include minresponsive1440 {
           background-color: #8c6d56;
         }
-        .buttonElements {
+      }
+      .buttonElements {
+        @include minresponsive1440 {
           width: 180px;
           display: flex;
           justify-content: center;
           height: 24px;
-          img {
+        }
+        img {
+          @include minresponsive1440 {
             width: 24px;
             height: 24px;
             margin-right: 12px;
           }
-          p {
+        }
+        p {
+          @include minresponsive1440 {
             color: #fff;
             font-family: Montserrat;
             font-size: 14px;
@@ -207,13 +157,84 @@
         }
       }
     }
-    .dropdownAndMenuBar {
+  }
+  .dropdownAndMenuBar {
+    display: flex;
+    align-items: center;
+    @include responsive768 {
+      display: flex;
+      align-items: center;
+    }
+    @include minresponsive1440 {
       display: none;
     }
-  }
-}
-@media screen and (min-width: 1920px) {
-  .menuContainer {
-    padding: 0 370px;
+    .dropdownElement {
+      padding-right: 48px;
+      padding-top: 5px;
+      @include responsive768 {
+        display: block;
+        padding-right: 74px;
+        padding-top: 5px;
+      }
+    }
+    .iconAndTextButton768 {
+      display: none;
+      @include responsive768 {
+        height: 48px;
+        padding: 12px;
+        display: block;
+        background: #dead8a;
+        border-radius: 8px;
+        border: none;
+        margin-right: 24px;
+      }
+      &:active {
+        @include responsive768 {
+          background-color: #a18570;
+        }
+      }
+      .buttonElements {
+        @include responsive768 {
+          width: 180px;
+          display: flex;
+          justify-content: center;
+          height: 24px;
+        }
+        img {
+          @include responsive768 {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+          }
+        }
+        p {
+          @include responsive768 {
+            color: #fff;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            padding-top: 2px;
+          }
+        }
+      }
+    }
+    .menuBarElement {
+      padding: 15px 45px 0 12px;
+      @include responsive768 {
+        padding: 15px 10px 0 0;
+      }
+      .secondMenuText {
+        display: none;
+        @include responsive768 {
+          display: block;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          color: var(--colorForText);
+          font-family: var(--Montserrat-Font-Family);
+        }
+      }
+    }
   }
 }

@@ -60,6 +60,7 @@ import WhiteInstaIcon from "./Components/Images/ContactImages/whiteInstaIcon.svg
 import WhiteFbIcon from "./Components/Images/ContactImages/whiteFbIcon.svg";
 import WhiteYoutubeIcon from "./Components/Images/ContactImages/whiteYoutubeIcon.svg";
 import BottomAddressLogo from "./Components/Images/ContactImages/bottomAddressLogo.svg";
+import ContactUsVectorImage from "./Components/Images/ContactImages/ContactUsVectorImage.png";
 
 const AllInformationJS = {
   address: {
@@ -238,6 +239,7 @@ const AllInformationJS = {
     whiteFbIcon: WhiteFbIcon,
     whiteYoutubeIcon: WhiteYoutubeIcon,
     bottomAddressLogo: BottomAddressLogo,
+    ContactUsVector: ContactUsVectorImage,
   },
 };
 

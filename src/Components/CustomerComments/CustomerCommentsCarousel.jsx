@@ -1,5 +1,5 @@
 import React from "react";
-import CustomerCommentsCarouselScss from "./CustomerCommentsCarousel.module.scss";
+import styles from "./CustomerCommentsCarousel.module.scss";
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import AllInformationJS from "../../informations";
@@ -33,31 +33,21 @@ function CustomerCommentsCarousel() {
         prevLabel="Previous"
         activeIndex={index}
         onSelect={(selectedIndex) => setIndex(selectedIndex)}
-        className={CustomerCommentsCarouselScss.Carousel}
+        className={styles.Carousel}
         indicators={false}
       >
-        <Carousel.Item className={CustomerCommentsCarouselScss.item1}>
-          <div className={CustomerCommentsCarouselScss.CustomerCommentsCard}>
+        <Carousel.Item className={styles.item1}>
+          <div className={styles.CustomerCommentsCard}>
             <img
-              src={
-                AllInformationJS.whereToFindInformations.FirstPerson
-                  .PersonImages
-              }
+              src={AllInformationJS.CustomerReviews.FirstPerson.PersonImages}
               alt="First Person"
             />
             <div>
-              <div
-                className={CustomerCommentsCarouselScss.CustomerCommentsDesc}
-              >
-                <h2>
-                  {
-                    AllInformationJS.whereToFindInformations.FirstPerson
-                      .FullName
-                  }
-                </h2>
+              <div className={styles.CustomerCommentsDesc}>
+                <h2>{AllInformationJS.CustomerReviews.FirstPerson.FullName}</h2>
                 <p>
                   {
-                    AllInformationJS.whereToFindInformations.FirstPerson
+                    AllInformationJS.CustomerReviews.FirstPerson
                       .PersonInformations
                   }
                 </p>
@@ -65,28 +55,20 @@ function CustomerCommentsCarousel() {
             </div>
           </div>
         </Carousel.Item>
-        <Carousel.Item className={CustomerCommentsCarouselScss.item1}>
-          <div className={CustomerCommentsCarouselScss.CustomerCommentsCard}>
+        <Carousel.Item className={styles.item1}>
+          <div className={styles.CustomerCommentsCard}>
             <img
-              src={
-                AllInformationJS.whereToFindInformations.SecondPerson
-                  .PersonImages
-              }
+              src={AllInformationJS.CustomerReviews.SecondPerson.PersonImages}
               alt="First Person"
             />
             <div>
-              <div
-                className={CustomerCommentsCarouselScss.CustomerCommentsDesc}
-              >
+              <div className={styles.CustomerCommentsDesc}>
                 <h2>
-                  {
-                    AllInformationJS.whereToFindInformations.SecondPerson
-                      .FullName
-                  }
+                  {AllInformationJS.CustomerReviews.SecondPerson.FullName}
                 </h2>
                 <p>
                   {
-                    AllInformationJS.whereToFindInformations.SecondPerson
+                    AllInformationJS.CustomerReviews.SecondPerson
                       .PersonInformations
                   }
                 </p>
@@ -94,28 +76,18 @@ function CustomerCommentsCarousel() {
             </div>
           </div>
         </Carousel.Item>
-        <Carousel.Item className={CustomerCommentsCarouselScss.item1}>
-          <div className={CustomerCommentsCarouselScss.CustomerCommentsCard}>
+        <Carousel.Item className={styles.item1}>
+          <div className={styles.CustomerCommentsCard}>
             <img
-              src={
-                AllInformationJS.whereToFindInformations.ThirdPerson
-                  .PersonImages
-              }
+              src={AllInformationJS.CustomerReviews.ThirdPerson.PersonImages}
               alt="First Person"
             />
             <div>
-              <div
-                className={CustomerCommentsCarouselScss.CustomerCommentsDesc}
-              >
-                <h2>
-                  {
-                    AllInformationJS.whereToFindInformations.ThirdPerson
-                      .FullName
-                  }
-                </h2>
+              <div className={styles.CustomerCommentsDesc}>
+                <h2>{AllInformationJS.CustomerReviews.ThirdPerson.FullName}</h2>
                 <p>
                   {
-                    AllInformationJS.whereToFindInformations.ThirdPerson
+                    AllInformationJS.CustomerReviews.ThirdPerson
                       .PersonInformations
                   }
                 </p>

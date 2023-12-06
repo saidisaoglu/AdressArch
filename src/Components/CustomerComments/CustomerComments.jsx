@@ -1,13 +1,13 @@
 import CustomerCommentsCarousel from "./CustomerCommentsCarousel";
-import CustomerCommentsScss from "./CustomerComments.module.scss";
+import styles from "./CustomerComments.module.scss";
 import AllInformationJS from "../../informations";
 export default function CustomerComments({ customerReviewsRef }) {
   return (
     <section
       ref={customerReviewsRef}
-      className={CustomerCommentsScss.customerCommentsSection}
+      className={styles.customerCommentsSection}
     >
-      <h2 className={CustomerCommentsScss.CustomerCommentsHeader}>
+      <h2 className={styles.CustomerCommentsHeader}>
         {AllInformationJS.texts.customerReviews}
       </h2>
       <CustomerCommentsCarousel />

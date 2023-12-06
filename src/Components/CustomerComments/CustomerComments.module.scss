@@ -2,7 +2,7 @@
 @import "../../Scss/Responsive\ measure/measure";
 
 .customerCommentsSection {
-  height: 100vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,7 +14,7 @@
   .CustomerCommentsHeader {
     position: absolute;
     top: 110px;
-    font-size: 1.5rem;
+    font-size: 16px;
     color: $main-color;
     font-style: normal;
     font-weight: 700;
@@ -23,8 +23,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: translateX(-50%, 50%);
-    @include responsive992 {
-      top: 55px;
+    @include responsive768 {
+      font-size: 20px;
+    }
+    @include responsive1024 {
+      font-size: 24px;
     }
   }
 }

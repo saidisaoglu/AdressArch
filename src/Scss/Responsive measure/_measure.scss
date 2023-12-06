@@ -28,6 +28,11 @@
     @content;
   }
 }
+@mixin minresponsive374 {
+  @media (min-width: 374px) {
+    @content;
+  }
+}
 @mixin responsive400 {
   @media (min-width: 400px) {
     @content;

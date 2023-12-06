@@ -10,9 +10,44 @@
   border: 2px solid rgb(255, 255, 255);
   border-radius: 50%;
 }
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1 !important;
+  transition: none !important;
+  z-index: 100 !important;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  opacity: 1 !important;
+  transition: none !important;
+}
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: none !important;
+}
+.carouselItem::before,
+.carouselItem::after {
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255, 1) 0%,
+    rgb(255, 255, 255, 0) 100%
+  );
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+.carouselItem::before {
+  top: 0;
+  left: 0;
+}
+.carouselItem::after {
+  top: 0;
+  right: 0;
+  transform: rotateZ(180deg);
 }
 @media screen and (max-width: 768px) {
   .carousel .carouselItem img {

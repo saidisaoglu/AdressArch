@@ -2,6 +2,13 @@
 
 .footerContainer {
   width: 100%;
+  padding-top: 50px;
+  @include responsive1024 {
+    padding-top: 100px;
+  }
+  @include responsive1600 {
+    padding-top: 150px;
+  }
   .contactUsText {
     text-align: center;
     font-size: 16px;

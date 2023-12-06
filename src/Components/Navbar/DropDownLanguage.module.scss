@@ -1,3 +1,5 @@
+@import "../../Scss/Responsive\ measure/measure";
+
 .dropdownElement {
   position: absolute;
   .dropdownLanguageSelected {
@@ -12,12 +14,25 @@
       padding-right: 4px;
       font-size: 12px;
       font-weight: 600;
+      @include responsive768 {
+        padding-top: 15px;
+        font-size: 14px;
+      }
     }
     .downSolidButton {
       border: none;
       cursor: pointer;
       background-color: transparent;
       padding-bottom: 7px;
+      @include responsive768 {
+        padding-bottom: 0;
+      }
+      img {
+        @include responsive768 {
+          width: 12px;
+          height: 24px;
+        }
+      }
     }
   }
   .languageElement {
@@ -27,6 +42,9 @@
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(38.5px);
     border-radius: 5px;
+    @include responsive768 {
+      margin-top: 15px;
+    }
     .checkAndLanguage {
       display: flex;
       justify-content: end;
@@ -39,6 +57,11 @@
         padding-left: 3px;
         padding-right: 2px;
         margin-bottom: 0;
+        @include responsive768 {
+          font-size: 17px;
+          padding-left: 3px;
+          padding-right: 2px;
+        }
       }
       .langText {
         width: 1px;
@@ -49,6 +72,10 @@
         margin-bottom: 1px;
         margin-top: 3.5px;
         cursor: pointer;
+        @include responsive768 {
+          font-size: 14px;
+          padding-right: 25px;
+        }
       }
     }
     .checkAndLanguage:first-child {
@@ -77,37 +104,5 @@
   }
   .dropdownElement:hover .languageElement {
     display: block;
-  }
-}
-@media screen and (min-width: 768px) {
-  .dropdownElement {
-    .dropdownLanguageSelected {
-      .languageonPage {
-        padding-top: 15px;
-        font-size: 14px;
-      }
-      .downSolidButton {
-        padding-bottom: 0;
-        img {
-          width: 12px;
-          height: 24px;
-        }
-      }
-    }
-    .languageElement {
-      margin-top: 15px;
-      .checkAndLanguage {
-        display: flex;
-        .checkIcon {
-          font-size: 17px;
-          padding-left: 3px;
-          padding-right: 2px;
-        }
-        .langText {
-          font-size: 14px;
-          padding-right: 25px;
-        }
-      }
-    }
   }
 }

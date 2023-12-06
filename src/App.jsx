@@ -8,6 +8,7 @@ import CustomerComments from "./Components/CustomerComments/CustomerComments";
 import WhereToFindS from "./Components/WhereToFind/WhereToFindS";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import VectorImage from "./Components/ContactUs/VectorImage";
 
 export function App() {
   const refs = {
@@ -30,6 +31,7 @@ export function App() {
         <WhereToFindS whereToFindRef={refs.whereToFindRef} />
         {/* <CustomerComments customerReviewsRef={refs.customerReviewsRef} /> */}
         <AboutUs aboutUsRef={refs.aboutUsRef} />
+        <VectorImage />
         <ContactUs contactWithUsRef={refs.contactWithUsRef} />
         <ToastContainer />
       </div>
